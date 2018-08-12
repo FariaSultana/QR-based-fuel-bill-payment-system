@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/imgCurrnetFuel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/current_fuel" />
+
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/currentFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 Litre"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imgCurrnetFuel"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp" />
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/currentKm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="0 km"
+            android:layout_toRightOf="@+id/imgCurrnetFuel"
+            android:layout_below="@+id/currentFuel"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp" />
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Current Status"
+            android:layout_below="@+id/imgCurrnetFuel"
+            android:textColor="@color/colorgrey"
+            android:textSize="12sp" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/currentFuel"
+            android:background="@color/colorgrey"/>
+
+        <ImageView
+            android:id="@+id/imgDistance"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/view"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/distance" />
+
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgDistance"
+            android:layout_centerVertical="true"
+            android:text="0 km"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imgTime"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/distance"
+            android:padding="5dp"
+            android:src="@drawable/time" />
+
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgTime"
+            android:layout_centerVertical="true"
+            android:text="0 Sec"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp" />
+
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mylocation" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:background="@color/warning"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/remining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="your remaining fuel"
+            android:textColor="@color/colorwhite"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <fragment xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout1"
+        tools:context="com.example.admin1.googlemapdemo.MapsActivity" />
+</RelativeLayout>

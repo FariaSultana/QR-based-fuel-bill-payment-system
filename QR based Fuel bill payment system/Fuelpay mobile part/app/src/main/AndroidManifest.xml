@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="project.afinal.fuelpay">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD8bcuF1EQQHW_NrMU61XypuQMyKo_AMzk" />
+
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".StationAreaSearchActivity" />
+        <activity android:name=".StationDetailsAreaSearchActivity" />
+        <activity android:name=".FuelRateActivity" />
+        <activity android:name=".AddMoneyActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".QRScanActivity" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".TransactionActivity" />
+        <activity android:name=".FuelCalculatorActivity" />
+        <activity android:name=".ExpenseActivity" />
+        <activity android:name=".TrafficAreaSearchActivity" />
+        <activity android:name=".TrafficAreaSearchDetailsActivity" />
+        <activity android:name=".MapDistanceReminderActivity" />
+        <activity android:name=".MapAllStationSearchActivity" />
+        <activity android:name=".MapInputDistanceActivity" />
+        <activity android:name=".MyMoodActivity" />
+        <activity
+            android:name=".FuelAlarmActivity"
+            android:theme="@style/AlarmTheme" />
+        <activity
+            android:name=".HomeMainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name=".library.AlarmReceiver" />
+
+        <service
+            android:name=".library.RingtonePlayingService"
+            android:enabled="true" />
+
+        <receiver android:name=".library.IncomingCallReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"></action>
+            </intent-filter>
+
+        </receiver>
+    </application>
+
+</manifest>

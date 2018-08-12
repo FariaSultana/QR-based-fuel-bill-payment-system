@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imageView2">
+
+        <LinearLayout
+            android:id="@+id/ln"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_form">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Today"
+                android:layout_marginTop="40dp"
+                android:textSize="14sp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorgrey"/>
+            <TextView
+                android:id="@+id/today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BDT 0"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="end"
+                android:textSize="@dimen/text_large"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Last 7 days"
+                android:layout_marginTop="40dp"
+                android:textSize="14sp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorgrey"/>
+            <TextView
+                android:id="@+id/week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BDT 00"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="end"
+                android:textSize="@dimen/text_large"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Last 30 days"
+                android:layout_marginTop="40dp"
+                android:textSize="14sp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorgrey"/>
+            <TextView
+                android:id="@+id/month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BDT 000"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="end"
+                android:textSize="@dimen/text_large"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Last year"
+                android:layout_marginTop="40dp"
+                android:textSize="14sp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorgrey"/>
+            <TextView
+                android:id="@+id/year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BDT 0000"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="end"
+                android:textSize="@dimen/text_large"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

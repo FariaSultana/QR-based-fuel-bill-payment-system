@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="fill_parent"
+                android:layout_height="240dp"
+                android:src="@drawable/home_cover"
+                android:background="@color/colorPrimary"
+                android:scaleType="fitXY" />
+            <!--Start main body-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--1st row-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <!--my account-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="myAccount"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_my_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/card_margin"
+                            android:layout_gravity="center"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/my_acc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/profile"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_my_acc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/my_acc"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="My Account"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+                    <!--add money-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="addMoney"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_add_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/card_margin"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/add_money"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/add_money"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_add_money"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/add_money"
+                                    android:gravity="center"
+                                    android:paddingBottom="5dp"
+                                    android:text="Add Money"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--end 1st row-->
+
+                <!--2nd row-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <!--qr payment-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="qrScan"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_qr"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/card_margin"
+                            android:layout_gravity="center"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/qr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/qr"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_qr"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/qr"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="QR Payment"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                    <!--transaction-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="transaction"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_transaction"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/card_margin"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/transaction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/transaction"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_transaction"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/transaction"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="Transaction"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--end 2nd row-->
+
+                <!--3rd row-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <!--Station Traffic-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:onClick="stationTraffic"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_traffic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/card_margin"
+                            android:layout_gravity="center"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/traffic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/man"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_traffic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/traffic"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="Station Traffic"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+                    <!--expense-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="expense"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_expense"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/card_margin"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/expense"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/costcal"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_expense"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/expense"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="Expense"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--end 3rd row-->
+
+                <!--4th row-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <!--fuel rate-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="fuelRate"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_rate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/card_margin"
+                            android:layout_gravity="center"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/fuel_rate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/fuelrate"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_fuel_rate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="5dp"
+                                    android:layout_below="@+id/fuel_rate"
+                                    android:gravity="center"
+                                    android:text="Fuel Rate"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+                    <!--fuel calculator-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="fuelCalculator"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_calculator"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/card_margin"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/calculator"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/fuelcal"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_calculator"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="5dp"
+                                    android:layout_below="@+id/calculator"
+                                    android:gravity="center"
+                                    android:text="Fuel Calculator"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--end 4th row-->
+
+                <!--5th row-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <!--find map-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="mapSearch"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_find_map"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/card_margin"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/map"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/location"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_map"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="5dp"
+                                    android:layout_below="@id/map"
+                                    android:gravity="center"
+                                    android:text="Find on Map"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+                    <!--search station-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="stationSearch"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/card_margin"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/search"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/search"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_search"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/search"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="Station Search"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--end 5th row-->
+
+                <!--6th row-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <!--fuel reminder-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="reminder"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_reminder"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/card_margin"
+                            android:layout_gravity="center"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/reminder"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/reminder"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_reminder"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/reminder"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="Map Reminder"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+                    <!--fuel alarm-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="alarm"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_alarm"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/card_margin"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/alarm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/alarm"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_alarm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/alarm"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="Fuel Alarm"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--end 6th row-->
+
+                <!--7th row-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <!--mood-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="mood"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_mood"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/card_margin"
+                            android:layout_gravity="center"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/mood"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/mood"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_mood"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/mood"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="My Mood"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+                    <!--exit-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:onClick="exit"
+                        android:layout_weight="1">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/card_exit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/card_margin"
+                            android:elevation="3dp"
+                            card_view:cardCornerRadius="@dimen/card_album_radius">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/exit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/album_cover_height"
+                                    android:background="@drawable/exit"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/txt_exit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/exit"
+                                    android:paddingBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="Exit"
+                                    android:textColor="@color/bgTint"
+                                    android:textSize="@dimen/album_title" />
+
+                            </RelativeLayout>
+
+                        </android.support.v7.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--end 7th row-->
+
+
+            </LinearLayout>
+            <!--End main body-->
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/ripple"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/stationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_medium"
+        android:textColor="#94000000"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/toAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_small"
+        android:layout_below="@+id/stationName"
+        android:textColor="#94000000"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/create_dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toAcc"
+        android:textSize="@dimen/text_small"
+        android:textStyle="italic"
+        android:text="TextView" />
+
+
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/text_medium"
+        android:text="BDT 1000.00"/>
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Fuelpay</string>
+
+    <!--<string name="server_address">http://192.168.0.105/fuel_pay/</string>-->
+    <!--<string name="server_address">http://192.168.43.191/fuel_pay/</string>-->
+    <!--<string name="server_address">http://192.168.0.83/fuel_pay/</string>-->
+     <string name="server_address">http://fuelpay.trademajestic.com/</string>
+
+
+    <!-- Error Message -->
+    <string name="errorHeader">Attention!</string>
+    <string name="errorMessage">Sorry, the request cannot be processed at this moment. Please try later.</string>
+    <string name="errorHeaderHttpErrorjson">Http Response Error!</string>
+    <string name="errorMessageHttpErrorjson">Sorry, the request cannot be processed at this moment. Please try later.</string>
+
+    <!-- Internet Error Message -->
+    <string name="internetHeader">Oops...</string>
+    <string name="internetMessage">Looks like you"'"ve lost internet connections.</string>
+
+    <!-- Internet Error Message -->
+    <string name="passwordHeader">Password Mismatch</string>
+    <string name="passwordMessage">Password and Confirm password field must be same.</string>
+
+    <!-- Internet Error Message -->
+    <string name="loginFailHeader">Sorry...</string>
+    <string name="lofinFailMessage">Invalid Username or Password.</string>
+
+
+    <!-- Internet Error Message -->
+    <string name="failHeader">Sorry...</string>
+    <string name="failMessage">No data found.</string>
+
+    <string-array name="vehicleType">
+        <item>Car</item>
+        <item>Bike</item>
+        <item>CNG</item>
+        <item>Mini Bus</item>
+        <item>Bus</item>
+    </string-array>
+    <string-array name="fuelType">
+        <item>Petrol</item>
+        <item>Diesel</item>
+        <item>Gas</item>
+        <item>Mobil</item>
+        <item>Kerosene</item>
+    </string-array>
+    <string-array name="fuelCal">
+        <item>Fuel to Price</item>
+        <item>Price to Fuel</item>
+    </string-array>
+
+
+</resources>
